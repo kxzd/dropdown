@@ -1,572 +1,574 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
-    background: #ddd;
-    text-align: center;
+  background: #ddd;
+  text-align: center;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-title {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .navbar-links {
-    margin-left: auto;
-    margin-right: 3rem;
+  margin-left: auto;
+  margin-right: 3rem;
 }
 
 .navbar-button {
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 30px;
-    height: 45px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30px;
+  height: 45px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .navbar-button .bar {
-    display: block;
-    position: absolute;
-    height: 8px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .navbar-button span:nth-child(1) {
-    top: 0px;
+  top: 0px;
 }
 
 .navbar-button span:nth-child(2) {
-    top: 18px;
+  top: 18px;
 }
 
 .navbar-button span:nth-child(3) {
-    top: 36px;
+  top: 36px;
 }
 
 .navbar-button.open span:nth-child(1) {
-    top: 18px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .navbar-button.open span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
+  opacity: 0;
+  left: -60px;
 }
 
 .navbar-button.open span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
-
 nav > div > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    background: #ddd;
-    border-radius: 5px;
-  }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: #ddd;
+  border-radius: 5px;
+}
 
 nav > div > ul > li {
-    float: left;
-    display: block;
-    width: 150px;
-    height: 65px;
-    line-height: 65px;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-  }
-
+  float: left;
+  display: block;
+  width: 150px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
 
 nav > div > ul > li:hover {
-    background: #d5d5d5;
-    border-radius: 5px;
-  }
-  
+  background: #d5d5d5;
+  border-radius: 5px;
+}
+
 ul.drop-menu {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 100%;
-    padding: 0;
-  }
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
 
 ul.drop-menu li {
-    background: #666;
-    color: rgba(255, 255, 255, 0.7);
-  }
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+}
 
 ul.drop-menu li:hover {
-    background: #606060;
-  }
+  background: #606060;
+}
 
 ul.drop-menu li:last-child {
-    border-radius: 0px 0px 5px 5px;
-  }
-  
+  border-radius: 0px 0px 5px 5px;
+}
+
 ul.drop-menu li {
-    display: none;
-  }
-  
+  display: none;
+}
+
 li:hover > ul.drop-menu li {
-    display: block;
-  }
+  display: block;
+}
 
 /* HOME */
 
 li:hover > ul.drop-menu.menu-1 {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(1) {
-    animation-name: menu1;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(2) {
-    animation-name: menu1;
-    animation-duration: 450ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(3) {
-    animation-name: menu1;
-    animation-duration: 600ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(4) {
-    animation-name: menu1;
-    animation-duration: 750ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(5) {
-    animation-name: menu1;
-    animation-duration: 900ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(6) {
-    animation-name: menu1;
-    animation-duration: 1050ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 1050ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-1 li:nth-child(7) {
-    animation-name: menu1;
-    animation-duration: 1200ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu1;
+  animation-duration: 1200ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes menu1 {
-    0% {
-        opacity: 0;
-        transform: rotateY(120deg) translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0deg) translateY(0px);
-    }
+  0% {
+    opacity: 0;
+    transform: rotateY(120deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0deg) translateY(0px);
+  }
 }
 
 /* ABOUT */
 
 li:hover > ul.drop-menu.menu-2 {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(1) {
-    animation-name: menu2;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(2) {
-    animation-name: menu2;
-    animation-duration: 400ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(3) {
-    animation-name: menu2;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(4) {
-    animation-name: menu2;
-    animation-duration: 600ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(5) {
-    animation-name: menu2;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(6) {
-    animation-name: menu2;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-2 li:nth-child(7) {
-    animation-name: menu2;
-    animation-duration: 900ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu2;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes menu2 {
-    0% {
-        opacity: 0;
-        transform: rotateX(90deg) translateY(50px);
-    }
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: rotateX(0deg) translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+  }
 }
 
 /* PROJECTS */
 
 li:hover > ul.drop-menu.menu-3 {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(1) {
-    animation-name: menu3;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(2) {
-    animation-name: menu3;
-    animation-duration: 400ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(3) {
-    animation-name: menu3;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(4) {
-    animation-name: menu3;
-    animation-duration: 600ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(5) {
-    animation-name: menu3;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(6) {
-    animation-name: menu3;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-3 li:nth-child(7) {
-    animation-name: menu3;
-    animation-duration: 900ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: menu3;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes menu3 {
-    0% {
-        opacity: 0;
-        transform: scale(0.1) translateY(-30px);
-    }
-    50% {
-        transform: scale(1.2) translateY(10px);
-    }
-    100% {
-        transform: scale(1) translateY(0px) translateX(0px);
-        opacity: 1;
-    }
-
+  0% {
+    opacity: 0;
+    transform: scale(0.1) translateY(-30px);
+  }
+  50% {
+    transform: scale(1.2) translateY(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0px) translateX(0px);
+    opacity: 1;
+  }
 }
 
 /* CONTACT */
 
 li:hover > ul.drop-menu.menu-4 {
-    perspective: 1000px;
+  perspective: 1000px;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(1) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(2) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 400ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(3) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(4) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 600ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 700ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(6) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 li:hover > ul.drop-menu.menu-4 li:nth-child(7) {
-    transform-origin: top left;
-    animation-name: menu4;
-    animation-duration: 900ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  transform-origin: top left;
+  animation-name: menu4;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes menu4 {
-    0% {
-        opacity: 0;
-        transform: rotate(30deg) translateY(30px);
-    }
-    100% {
-        transform: rotate(0deg) translateY(0);
-        opacity: 1;
-    }
-
+  0% {
+    opacity: 0;
+    transform: rotate(30deg) translateY(30px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 800px) {
-    nav {
-        height: 5rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  nav {
+    height: 5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .navbar-title {
-        padding-top: 20px;
-        align-items: center;
-        display: flex;
-    }
+  .navbar-title {
+    padding-top: 20px;
+    align-items: center;
+    display: flex;
+  }
 
-    .navbar-button {
-        display: flex;
-    }
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
+  .navbar-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
 
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 
-    .navbar-links ul li ul {
-        display: none;
-    }
+  .navbar-links ul li ul {
+    display: none;
+  }
 
-    .navbar-links.active {
-        display: flex;
-    } 
+  .navbar-links.active {
+    display: flex;
+  }
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .carousel-button-container {
-    width: 100vw;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-button {
-    font-family: inherit;
-    width: 10rem;
-    height: 3rem;
-    cursor: pointer;
-    text-transform: uppercase;
+  font-family: inherit;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .carousel {
-    position: relative;
-    height: 600px;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .carousel__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .carousel__track-container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .carousel__track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in-out;
 }
 
 .carousel__slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .carousel__button--left {
-    left: -30px;
+  left: -30px;
 }
 
 .carousel__button--right {
-    right: -30px;
+  right: -30px;
 }
 
 .carousel__button img {
-    width: 20px;
+  width: 20px;
 }
 
 .carousel__nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
 }
 
 .carousel__indicator {
-    border: 0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: rgba(0,0,0, 0.25);
-    cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .carousel__indicator.current-slide {
-    background: rgba(0,0,0, 0.75)
+  background: rgba(0, 0, 0, 0.75);
 }
 
-.is-hidden {
-    display: none;
+.carousel-back-button {
+  font-family: "inherit";
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }

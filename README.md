@@ -1,4 +1,4 @@
-Drop down menu style experimentation using HTML and CSS, as well as the carousel demo button that navigates to another HTML page to demonstrate the carousel.
+Drop down menu style experimentation using HTML and CSS, plus a carousel demo button that navigates to another HTML page to demonstrate the carousel, plus clicking on registration button in the navigation bar will take the user to a very basic registration form with some validation checks. 
 
 [Live demo](https://kxzd.github.io/dropdown/)
 

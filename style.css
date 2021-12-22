@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Courier New", Courier, monospace;
   box-sizing: border-box;
@@ -428,7 +432,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(7) {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   nav {
     height: 5rem;
     flex-direction: column;
@@ -571,4 +575,73 @@ a {
   height: 3rem;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.navbar-links a {
+  padding: 20px;
+}
+
+.login { 
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.login button {
+  font-family: inherit;
+  width: 100px;
+  height: 50px;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.login div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.login form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+input:valid {
+  border-color: rgb(0, 128, 0);
+}
+
+input:invalid {
+  border-color: rgb(153, 0, 0);
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: rgb(153, 0, 0);
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }
